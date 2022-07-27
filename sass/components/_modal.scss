@@ -181,7 +181,7 @@
     clip: rect(0 0 0 0);
   
     &:checked + .icon-chek {
-      background-image: url(/images/icon/check.svg);
+      background-image: url(../images/icon/check.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-color: var(--accent-color);
