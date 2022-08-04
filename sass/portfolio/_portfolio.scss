@@ -131,6 +131,7 @@
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 24px;
+  flex-grow: 1;
 }
 
 .portfolio-list-title {
@@ -147,4 +148,20 @@
   line-height: 1.87;
 
   color: var(--secondary-text-color);
+}
+
+.catalog__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  transition: box-shadow var(--transition);
+}
+.catalog__link:hover, .catalog__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.catalog__link:hover .catalog__description, .catalog__link:focus .catalog__description {
+  opacity: 1;
+  transform: translateY(0);
 }

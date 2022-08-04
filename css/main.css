@@ -1318,6 +1318,9 @@ img {
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .portfolio-list-title {
@@ -1332,6 +1335,34 @@ img {
   font-size: 16px;
   line-height: 1.87;
   color: var(--secondary-text-color);
+}
+
+.catalog__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  color: inherit;
+  -webkit-transition: -webkit-box-shadow var(--transition);
+  transition: -webkit-box-shadow var(--transition);
+  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), -webkit-box-shadow var(--transition);
+}
+
+.catalog__link:hover, .catalog__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.catalog__link:hover .catalog__description, .catalog__link:focus .catalog__description {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .backdrop {
